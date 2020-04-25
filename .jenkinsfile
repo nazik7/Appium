@@ -1,0 +1,55 @@
+pipeline {
+	agent any
+	stages {
+		stage('Build'){
+			steps{
+				 echo "executing Build job"
+			}
+		}
+		stage('Deploy-to-Dev'){
+			steps{
+				 echo "executing Deploy to Dev"
+			}
+		}
+		stage('Unit tests'){
+			steps{
+				 echo "run unit tests"
+			}
+		}
+		stage('Deploy to Test jenkinsfile'){
+			steps{
+				echo "executing Deploy to Test jenkinsfile"
+			}
+		}
+		stage('Deploy to STG jenkinsfile'){
+			steps{
+				echo "executing Deploy to STG jenkinsfile"
+			}
+		}
+		stage('Regression test jenkinsfile'){
+			steps{
+				echo "run regression test using jenkinsfile"
+			}
+		}
+		stage('Smoke test jenkinsfile'){
+			steps{
+				echo "run Smoke test jenkinsfile"
+			}
+		}
+		stage("Build jenkinsfile"){
+			steps{
+				echo "run Build jenkinsfile"
+			}
+		}
+		stage('Release jenkinsfile'){
+			steps{
+				echo "run Release jenkinsfile"
+			}
+		}
+		stage('Acceptance test jenkinsfile'){
+			steps{
+				echo "run Acceptance test jenkinsfile"
+			}
+		}
+	}
+}
